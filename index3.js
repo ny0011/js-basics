@@ -13,4 +13,25 @@ console.dir(title);
 
 // node의 맨 첫번째 자식을 반환함
 // .class, #id
-document.querySelector("#title");
+const title2 = document.querySelector("#title");
+
+// JS는 이벤트에 대응하기 위해 만들어짐.
+
+// 자바스크립트가 자동으로 함수에 객체를 보냄(이름이 event 객체)
+function handleResize(event) {
+  console.log(event);
+  console.log("I have been resized");
+}
+
+// 지금 당장 실행됨
+//window.addEventListener("resize", handleResize());
+
+// 이벤트를 받기를 기다리고 있음. resize 이벤트가 일어나면 handleResize()함수가 실행됨
+window.addEventListener("resize", handleResize);
+
+function handleClick() {
+  title.style.color = "red";
+}
+
+// 한번 클릭하면 바뀌고 그 상태를 유지함.
+title.addEventListener("click", handleClick);
