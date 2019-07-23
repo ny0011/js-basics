@@ -30,8 +30,26 @@ function handleResize(event) {
 window.addEventListener("resize", handleResize);
 
 function handleClick() {
-  title.style.color = "red";
+  title2.style.color = "red";
 }
 
 // 한번 클릭하면 바뀌고 그 상태를 유지함.
-title.addEventListener("click", handleClick);
+title2.addEventListener("click", handleClick);
+
+if ("10" === 10) {
+  console.log("hi");
+} else if ("10" === "10") {
+  console.log("lele");
+} else {
+  console.log("ho");
+}
+
+const age = prompt("How old are you?");
+
+console.log(age);
+
+if (age > 18) {
+  console.log("you can drink");
+} else {
+  console.log("too young");
+}
