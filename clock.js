@@ -9,9 +9,20 @@ function changeTimeFormat(strings, time) {
 
 function getTime() {
 	const date = new Date();
-	const minutes = date.getMinutes();
+	const options = {
+		hour: "2-digit",
+		minute: "2-digit",
+		second: "2-digit",
+		hour12: true
+	};
+
+	clockTitle.innerHTML = date.toLocaleString("en-GB", options);
+
+	/*
+  const minutes = date.getMinutes();
 	const hours = date.getHours();
-	const seconds = date.getSeconds();
+  const seconds = date.getSeconds();
+  
 	let hourInt = `${hours}`;
 	let time12hour = "AM";
 
@@ -22,17 +33,11 @@ function getTime() {
 
 	if (hours === 0 || hours === 12) {
 		hourInt = 12;
-	}
-
-	clockTitle.innerHTML = `${hourInt
-		.toString()
-		.padStart(2, "0")}:${minutes
-		.toString()
-		.padStart(2, "0")}:${seconds
-		.toString()
-		.padStart(2, "0")} ${time12hour}`;
-	//`${changeTimeFormat`${hourInt}`}:${changeTimeFormat`${minutes}`}:${changeTimeFormat`${seconds}`} ${time12hour}`;
-	/*  `${hourInt < 10 ? `0${hourInt}` : hourInt}:${
+  } 
+  */
+	// clockTitle.innerHTML = `${hourInt.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")} ${time12hour}`;
+	// clockTitle.innerHTML = `${changeTimeFormat`${hourInt}`}:${changeTimeFormat`${minutes}`}:${changeTimeFormat`${seconds}`} ${time12hour}`;
+	/* clockTitle.innerHTML = `${hourInt < 10 ? `0${hourInt}` : hourInt}:${
 		minutes < 10 ? `0${minutes}` : minutes
   }:${seconds < 10 ? `0${seconds}` : seconds} ${time12hour}`;
   */
