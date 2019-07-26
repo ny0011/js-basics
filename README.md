@@ -11,9 +11,15 @@ Vanila JS
 -   함수를 매 초 call할 때 성능이 안좋진 않을까?
 -   몇 자리수를 string으로 반환하는 함수 : str.padStart()
     https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart
--   내가 시계 구현한 것을 Date.prototype.toLocaleString() 이 지원해줌!!!
+-   내가 시계 구현한 것을 Date.prototype.toLocaleString()이 지원해줌!!!
     https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleString
 
 #### 2. 사용자 이름을 얻자
 
 -   **local storage** : 데이터를 사용자 컴퓨터 저장소에 저장한다
+-   localStorage.setItem("ny", "ee") : key-value를 저장함
+-   localStorage.getItem("ny") : "ny"의 value를 가져옴
+
+-   loadName() 함수를 만들어보자
+-   currentUser 변수가 저장돼 있지 않으면 사용자 입력을 받고
+-   currentUser 변수가 저장돼있으면 인사 메시지를 출력
