@@ -29,3 +29,16 @@ Vanila JS
   -> 이 기본 동작을 하고 싶지 않음
   -> event.preventDefault();
   -> 문자가 사라지지 않고 페이지도 새로고침 되지 않음.
+
+- js 파일을 여러개 만들다보면 const 변수 이름이 중복되어 사용될 수 있음 -> 변수이름을 다르게 만들어야 함.
+- 자바 스크립트 모듈들을 분리시켜서 만드는 방법?
+  https://stackoverflow.com/questions/20311604/module-pattern-how-to-split-the-code-for-one-module-into-different-js-files
+  https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Modules
+- 이름 중복을 피하려면?
+  https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Modules#Renaming_imports_and_exports
+
+- paintToDo : 화면에 todo 내역을 표시하자
+  text가 표시되는 span 태그 생성 + 삭제 버튼 button 태그 생성
+  -> 두 태그를 감싸는 li태그 생성
+  -> 두 태그를 li태그 밑으로(자식으로) 붙이기
+  -> li태그를 html에 있는 ul 태그 밑에 붙이기
