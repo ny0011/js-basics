@@ -42,3 +42,14 @@ Vanila JS
   -> 두 태그를 감싸는 li태그 생성
   -> 두 태그를 li태그 밑으로(자식으로) 붙이기
   -> li태그를 html에 있는 ul 태그 밑에 붙이기
+
+- saveToDo : local storage "toDos" key에 todo list를 저장하자!
+  그런데 변수 그대로를 저장하면 object object라고 깨짐.
+  저장소에는 자바스크립트 변수를 저장하지 못하고 string으로만 저장가능함.
+  -> javascript -> local storage 로 저장 : JSON.stringify()를 사용해 원하는 양식대로 만들자
+  -> local storage -> javascript 로 불러오기 : JSON.parse()
+
+- array의 각 원소마다 실행시키고 싶을 때 : array.forEach(function(x){console.log(x.text);})
+
+- 페이지를 새로고침하면 변수 toDos는 비어있으므로 ul에 붙어있는게 없음 -> local storage에서 데이터를 불러와서 ul에 그려주는 작업이 필요함.
+  -> array 각 원소마다 paintToDo 실행하기!
