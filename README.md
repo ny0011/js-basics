@@ -57,7 +57,7 @@ Vanila JS
     local storage에서 데이터를 불러와서 ul에 그려주는 작업이 필요함. -> array 각
     원소마다 paintToDo 실행하기!
 
-#### 3. todo list를 삭제하자
+#### 4. todo list를 삭제하자
 
 -   1. local storage에서 list를 삭제하고 저장
 -   2. html에서 list를 삭제
@@ -82,3 +82,10 @@ Vanila JS
     => toDos를 지우면 li의 id와 변경된 toDos의 id가 달라짐 -> syncToDos 변수 :
     제거된 id < li의 id ? li의 id를 1 감소 (1, 2, 3 ,4, 5 중 3이 지워지면
     1,2,4,5 가 남아서 4, 5를 3,4로 변경해줘야 함.)
+
+#### 5. 배경사진을 넣자
+
+-   https://unsplash.com/
+-   body에 img 태그를 삽입 -> 단순 삽입은 배경이 아니라 body 하위 태그로 작동하
+    기 때문에 class도 추가해서 css에서 이미지 태그 -> 배경 태그로 역할이 바뀌도
+    록 한다.
