@@ -95,3 +95,12 @@ Vanila JS
 - navigator.geolocation.getCurrentPosition(위치 정보를 가져오는 데 성공했을 때 실행할 함수, 실패했을 때 실행할 함수)
 - https://home.openweathermap.org/api_keys
   이 지도 사이트의 API를 사용해보자
+- API : Application Programming interface
+- https://openweathermap.org/current 에서 api를 참고할 수 있는데 geographic coordinates를 이용하는 api를 사용하자
+  -> api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}
+  -> 온도 단위를 변경하고 싶을 때 : https://openweathermap.org/current#data
+  -> fetch(`URL`); 로 api를 호출할 수 있다!
+  -> URL에서 데이터를 모두 가져온 후에 함수 호출 : fetch().then(함수)
+  -> response는 object 타입이어서 읽기 어려움 -> json파일로 변환하자
+  : fetch().then(함수(변수){변수.json()})
+  -> 그 json파일도 모두 다 읽은 후에 처리하자 : fetch().then(함수(변수){return 변수.json()}).then(함수())
