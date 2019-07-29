@@ -1,41 +1,43 @@
+const API_KEY = "7a2ec337bb0f8a923ba9de233bb869b3";
 const COORDS = "coords";
 
 function saveCoords(coordsObj) {
-	localStorage.setItem(COORDS, JSON.stringify(coordsObj));
+  localStorage.setItem(COORDS, JSON.stringify(coordsObj));
 }
 
 function handleGeoSuccess(position) {
-	const latitude = position.coords.latitude;
-	const longitude = position.coords.longitude;
+  console.log(position);
+  const latitude = position.coords.latitude;
+  const longitude = position.coords.longitude;
 
-	// js에서 key와 value가 이름이 같다면 아래처럼 이름만 써도 됨.
-	const coordsObj = {
-		latitude,
-		longitude
-	};
+  // js에서 key와 value가 이름이 같다면 아래처럼 이름만 써도 됨.
+  const coordsObj = {
+    latitude,
+    longitude
+  };
 
-	saveCoords(coordsObj);
+  saveCoords(coordsObj);
 }
 
 function handleGeoError() {
-	console.log("cant access geo location");
+  console.log("cant access geo location");
 }
 
 function askForCoords() {
-	navigator.geolocation.getCurrentPosition(handleGeoSuccess, handleGeoError);
+  navigator.geolocation.getCurrentPosition(handleGeoSuccess, handleGeoError);
 }
 
 function loadCoords() {
-	const loadedCoords = localStorage.getItem(COORDS);
-	if (loadCoords === null) {
-		askForCoords();
-	} else {
-		// get weather
-	}
+  const loadedCoords = localStorage.getItem(COORDS);
+  if (loadedCoords === null) {
+    askForCoords();
+  } else {
+    // get weather
+  }
 }
 
 function init() {
-	loadCoords();
+  loadCoords();
 }
 
 init();
