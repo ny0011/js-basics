@@ -1,5 +1,6 @@
 const clockContainer = document.querySelector(".js-clock"),
-	clockTitle = clockContainer.querySelector("h1");
+  clockTitle = clockContainer.querySelector(".time"),
+  clockFormat = clockContainer.querySelector(".js-clock-format");
 
 /*
 function changeTimeFormat(strings, time) {
@@ -8,17 +9,18 @@ function changeTimeFormat(strings, time) {
 */
 
 function getTime() {
-	const date = new Date();
-	const options = {
-		hour: "2-digit",
-		minute: "2-digit",
-		second: "2-digit",
-		hour12: true
-	};
+  const date = new Date();
+  const options = {
+    hour: "2-digit",
+    minute: "2-digit"
+    //second: "2-digit",
+  };
+  const format = date.getHours() >= 12 ? "pm" : "am";
 
-	clockTitle.innerHTML = date.toLocaleString("en-GB", options);
+  clockTitle.innerHTML = date.toLocaleString("en-GB", options);
+  clockFormat.innerHTML = format;
 
-	/*
+  /*
   const minutes = date.getMinutes();
 	const hours = date.getHours();
   const seconds = date.getSeconds();
@@ -35,16 +37,17 @@ function getTime() {
 		hourInt = 12;
   } 
   */
-	// clockTitle.innerHTML = `${hourInt.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")} ${time12hour}`;
-	// clockTitle.innerHTML = `${changeTimeFormat`${hourInt}`}:${changeTimeFormat`${minutes}`}:${changeTimeFormat`${seconds}`} ${time12hour}`;
-	/* clockTitle.innerHTML = `${hourInt < 10 ? `0${hourInt}` : hourInt}:${
+  // clockTitle.innerHTML = `${hourInt.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}:${seconds.toString().padStart(2, "0")} ${time12hour}`;
+  // clockTitle.innerHTML = `${changeTimeFormat`${hourInt}`}:${changeTimeFormat`${minutes}`}:${changeTimeFormat`${seconds}`} ${time12hour}`;
+  /* clockTitle.innerHTML = `${hourInt < 10 ? `0${hourInt}` : hourInt}:${
 		minutes < 10 ? `0${minutes}` : minutes
   }:${seconds < 10 ? `0${seconds}` : seconds} ${time12hour}`;
   */
 }
 
 function init() {
-	setInterval(getTime, 1000);
+  getTime();
+  setInterval(getTime, 1000);
 }
 
 init();

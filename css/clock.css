@@ -1,0 +1,29 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.clock {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  justify-content: center;
+  flex-direction: row;
+  transform: translate(-50%, -50%);
+  animation: fadeIn 1s linear;
+}
+
+.clock .time {
+  font-size: 800%;
+  font-weight: 700;
+}
+
+.clock .format {
+  font-size: 500%;
+}
