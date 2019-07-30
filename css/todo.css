@@ -1,0 +1,53 @@
+.toDo {
+	padding: 0px;
+	padding-top: 30px;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.toDo-form {
+	padding: 0px;
+	padding-bottom: 10px;
+	margin: auto;
+}
+
+.form__write {
+	border: none;
+	padding: 10px 0px;
+	border-radius: 0;
+	background: none;
+	font-size: 150%;
+	font-weight: 700;
+	color: #ffbe76;
+	text-align: center;
+}
+
+.greetings,
+.toDo-list {
+	font-size: 200%;
+	font-weight: 700;
+	color: #ff7979;
+}
+
+.toDo-list {
+	padding-top: 10px;
+}
+
+.toDo-list li {
+	margin-bottom: 10px;
+}
+
+.toDo-list span {
+	margin: 0px;
+	margin-left: 5px;
+}
+
+.toDo-list button {
+	border: none;
+	background: none;
+	margin: 0px;
+	padding: 0px;
+	font-size: 100%;
+}
